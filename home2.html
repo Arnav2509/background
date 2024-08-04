@@ -1,0 +1,80 @@
+<div class="background-image">
+    <img src="https://media3.giphy.com/media/SFRLNAQkWfRHIMNC3A/giphy.gif?cid=6c09b9522oqu9cp6eo8jqpfchxilonfz2ocmxklcdact4en5&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" alt="Healthy Food GIF" class="overlay-gif-left">
+    
+    <div class="conversation-box">
+        <div class="cloud">
+            <p><strong>Character:</strong> Hello Sonic!</p>
+        </div>
+    </div>
+    
+    <img src="https://media.tenor.com/vICgnQwkkbAAAAAM/sonic-hedgehog.gif" alt="Sonic GIF" class="overlay-gif-right">
+    
+    <div class="conversation-box-right">
+        <div class="cloud">
+            <p><strong>Sonic:</strong> Hey Shinchan!</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .background-image {
+        background: url('https://img.freepik.com/premium-photo/cute-cartoon-food-pattern-purple-background_14117-809881.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1722470400&semt=ais_hybrid') no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+        position: relative; /* Make it relative for absolute positioning of the GIFs */
+    }
+
+    .overlay-gif-left {
+        position: absolute;
+        top: 30%; /* Align with the first right GIF */
+        left: 0; /* Align to the left */
+        transform: translateY(-50%); /* Center the GIF vertically */
+        width: 150px; /* Reduced size */
+        height: auto; /* Maintain aspect ratio */
+        z-index: 1; /* Make sure the left GIF is above the background */
+    }
+
+    .overlay-gif-right {
+        position: absolute;
+        top: 30%; /* Align with the first right GIF */
+        right: 100; /* Align to the right */
+        transform: translateY(-50%); /* Center the GIF vertically */
+        width: 125px; /* Reduced size */
+        height: auto; /* Maintain aspect ratio */
+        z-index: 1; /* Make sure the right GIF is above the background */
+    }
+
+    .conversation-box {
+        position: absolute;
+        top: 25%; /* Position the conversation box vertically centered */
+        left: 170px; /* Adjust to position beside the left GIF */
+        z-index: 2; /* Ensure it's above the background */
+    }
+
+    .conversation-box-right {
+        position: absolute;
+        top: 25%; /* Position the conversation box vertically centered */
+        right: 250px; /* Adjust to position beside the right GIF */
+        z-index: 2; /* Ensure it's above the background */
+    }
+
+    .cloud {
+        background: #fff; /* White background for the speech bubble */
+        border: 1px solid #ccc; /* Border color */
+        border-radius: 10px; /* Rounded corners */
+        padding: 15px; /* Padding inside the bubble */
+        position: relative; /* Relative positioning for the triangle */
+        max-width: 200px; /* Max width for the speech bubble */
+    }
+
+    .cloud:after {
+        content: '';
+        position: absolute;
+        bottom: 100%; /* Position above the bubble */
+        left: 20px; /* Adjust left position */
+        margin-left: -5px; /* Center the triangle */
+        border-width: 5px; /* Size of the triangle */
+        border-style: solid;
+        border-color: transparent transparent #fff transparent; /* Triangle color */
+    }
+</style>
